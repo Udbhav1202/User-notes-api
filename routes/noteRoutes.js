@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Note = require('../models/noteModel');
-const protect = require('../middleware/authMiddleware');
+const protect = require('../middleware/authMiddleware'); //Imports your JWT middleware.
 
 // Get all notes for user
 router.get('/', protect, async (req, res) => {
